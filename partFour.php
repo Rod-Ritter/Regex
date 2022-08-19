@@ -19,14 +19,18 @@ function dump($tab)
 
     $masque1 = '/[aeiouy]/'; 
     $masque2 = '/j[aeiouy]/'; 
-
+    $masque3 = '/[aeiouy][aeiouy]/'; 
+    $chaine = 'je m appelle Michel et je fais des tableaus PHP au bord de l\'eau';
 
     preg_match_all($masque1, $chaine, $tab);
     dump($tab);
     echo "<br />";
     preg_match_all($masque2, $chaine, $tab1);
     dump($tab1);
-
+    echo "<br />";
+    preg_match_all($masque3, $chaine, $tab2);
+    dump($tab2);
+    echo "<br />"
 
     
 
