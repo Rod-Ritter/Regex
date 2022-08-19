@@ -7,7 +7,7 @@
     <title>Regex</title>
 </head>
 <body>
-    <h1>Faisons du Regex</h1>
+    <h1>Faisons tous du Regex (comme moi)</h1>
     <?php
 
     $masque = '/m/i'; 
@@ -22,6 +22,12 @@
     echo "<br />";
     var_dump($match_all);
     echo "<br />";
+
+    $match_all2 = [];
+    $valeur = preg_match_all($masque, $chaine, $match_all2, PREG_PATTERN_ORDER, 3);
+    echo "<p>il y a $valeur fois la lettre recherchée </p>";
+
+
 
     if(preg_match($masque, $chaine)) {
         echo "<p>j'ai trouvé l'occurence!</p>";
