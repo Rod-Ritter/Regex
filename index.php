@@ -10,8 +10,18 @@
     <h1>Faisons du Regex</h1>
     <?php
 
-    $masque = '/m/i'; // la mettre i rend inssensible à la case 
+    $masque = '/m/i'; 
     $chaine = 'michel';
+    $match = [];
+    $match_all = [];
+
+    preg_match($masque, $chaine, $match);
+    preg_match_all($masque, $chaine, $match_all);
+
+    var_dump($match);
+    echo "<br />";
+    var_dump($match_all);
+    echo "<br />";
 
     if(preg_match($masque, $chaine)) {
         echo "<p>j'ai trouvé l'occurence!</p>";
