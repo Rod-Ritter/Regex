@@ -12,7 +12,7 @@
 
 function dump($tab)
 {
-    echo '<pre style="height:100px;overflow-y: scroll;font-size:.5rem;padding: .6rem; font-family: Consolas, Monospace;background-color: #000;color:#fff;">';
+    echo '<pre style="font-size:.8rem;padding: .6rem; font-family: Consolas, Monospace;color:#000;">';
     var_dump($tab);
     echo '</pre>';
 }
@@ -20,16 +20,16 @@ function dump($tab)
     $masque1 = '/[aeiouy]/'; 
     $masque2 = '/j[aeiouy]/'; 
     $masque3 = '/[aeiouy][aeiouy]/'; 
-    $chaine = 'je m appelle Michel';
+    $chaine = 'je m appelle Michel et je fais des tableaus PHP au bord de l\'eau';
 
     preg_match_all($masque1, $chaine, $tab);
-    var_dump($tab);
+    dump($tab);
     echo "<br />";
     preg_match_all($masque2, $chaine, $tab1);
-    var_dump($tab1);
+    dump($tab1);
     echo "<br />";
     preg_match_all($masque3, $chaine, $tab2);
-    var_dump($tab2);
+    dump($tab2);
     echo "<br />"
 
     
