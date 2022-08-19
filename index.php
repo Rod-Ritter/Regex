@@ -17,8 +17,9 @@ function dump($tab)
     echo '</pre>';
 }
 
-    $masque1 = '/[aeiouy]/'; 
-    $masque2 = '/j[aeiouy]/'; 
+    $masque1 = '/[^c]/'; 
+    $masque2 = '/[^e]/'; 
+    $chaine = 'c\'est combien une place de cinema';
 
 
     preg_match_all($masque1, $chaine, $tab);
