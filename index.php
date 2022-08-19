@@ -17,15 +17,35 @@ function dump($tab)
     echo '</pre>';
 }
 
-    $masque1 = '/[^c]/'; 
-    $masque2 = '/[^e]/'; 
-    $chaine = 'c\'est combien une place de cinema';
+ /*  Classes de caractères abbrégées
+    *   \w, tous les caractères [a-zA-Z0-9_]
+    *   \W, aucune caractères [^a-zA-Z0-9_]
+    *   \d, tous les valeurs numériques
+    *   \D, tout ce qui n'est pas une valeur numérique
+    *   \s, caractère blanc (espace, retour chariot, retour à la ligne)
+    *   \S, tout sauf un caractère blanc
+    *   \h, espace horizontal
+    *   \H, tout sauf espace horizontal
+    *   \v, espace vertical
+    *   \V, tout sauf espace vertical
+    */
+
+
+    $masque1 = "/[\W]/";
+    $masque2 = "/[\d]/"; 
+    $masque3 = "/[\D]/"; 
+    $masque4 = "/[\s]/"; 
+    $chaine = 'je m\'appelle Amir est j\'ai 42 ans';
 
 
     preg_match_all($masque1, $chaine, $tab);
     dump($tab);
     echo "<br />";
     preg_match_all($masque2, $chaine, $tab1);
+    dump($tab1);
+    preg_match_all($masque2, $chaine, $tab2);
+    dump($tab1);
+    preg_match_all($masque2, $chaine, $tab3);
     dump($tab1);
 
 
