@@ -10,7 +10,16 @@
     <h1>Faisons du Regex</h1>
     <?php
 
-    $masque = '/Roro/i'
+    $masque = '/m/i'; // la mettre i rend inssensible à la case 
+    $chaine = 'michel';
+
+    if(preg_match($masque, $chaine)) {
+        echo "<p>j'ai trouvé l'occurence!</p>";
+        echo "<p>la chaine de caractere recherchée est présente : " .preg_match_all($masque, $chaine) . "fois </p>";
+    }
+    else {
+        echo "<p>je n'ai rien trouvé...</p>";
+    }
     
     ?>
     
