@@ -10,11 +10,34 @@
     <h1>Faisons tous du Regex (comme moi)</h1>
     <?php
 
-    $masque = '/ch/'; 
-    $citation ="les chaussettes de l'archiduchesses sont elles seches archiseche";
+function dump($tab)
+{
+    echo '<pre style="height:100px;overflow-y: scroll;font-size:.5rem;padding: .6rem; font-family: Consolas, Monospace;background-color: #000;color:#fff;">';
+    var_dump($tab);
+    echo '</pre>';
+}
 
-    $result = preg_split($masque, $citation);
-    var_dump($result);
+    $masque1 = '/[aeiouy]/'; 
+    $masque2 = '/j[aeiouy]/'; 
+    $masque3 = '/[aeiouy][aeiouy]/'; 
+    $chaine = 'je m appelle Michel';
+
+    preg_match_all($masque1, $chaine, $tab);
+    var_dump($tab);
+    echo "<br />";
+    preg_match_all($masque2, $chaine, $tab1);
+    var_dump($tab1);
+    echo "<br />";
+    preg_match_all($masque3, $chaine, $tab2);
+    var_dump($tab2);
+    echo "<br />"
+
+    
+
+
+
+    
+    
     
 
     
