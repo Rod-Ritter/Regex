@@ -10,11 +10,11 @@
     <h1>Faisons tous du Regex (comme moi)</h1>
     <?php
 
-    $masque = '/Michel/'; 
-    $chaine = 'Bonjour je m\'appelle Michel';
+    $masque = '/ch/'; 
+    $citation ="les chaussettes de l'archiduchesses sont lles seches archiseche";
 
-    $valeur = preg_filter($masque, 'Robert', $chaine);
-    echo "<p>$valeur</p>";
+    $result = preg_split($masque, $citation);
+    var_dump($result);
     
 
     
