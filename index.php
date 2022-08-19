@@ -10,32 +10,14 @@
     <h1>Faisons tous du Regex (comme moi)</h1>
     <?php
 
-    $masque = '/e/'; 
-    $chaine = 'michel';
-    $match = [];
-    $match_all = [];
+    $masque = '/Michel/'; 
+    $chaine = 'Bonjour je m\'appelle Michel';
 
-    preg_match($masque, $chaine, $match);
-    preg_match_all($masque, $chaine, $match_all);
+    $valeur = preg_filter($masque, 'Robert', $chaine);
+    echo "<p>$valeur</p>";
+    
 
-    var_dump($match);
-    echo "<br />";
-    var_dump($match_all);
-    echo "<br />";
-
-    $match_all2 = [];
-    $valeur = preg_match_all($masque, $chaine, $match_all2, PREG_PATTERN_ORDER, 3);
-    echo "<p>il y a $valeur fois la lettre recherchée </p>";
-
-
-
-    if(preg_match($masque, $chaine)) {
-        echo "<p>j'ai trouvé l'occurence!</p>";
-        echo "<p>la chaine de caractere recherchée est présente : " .preg_match_all($masque, $chaine) . " fois </p>";
-    }
-    else {
-        echo "<p>je n'ai rien trouvé...</p>";
-    }
+    
     
     ?>
     
